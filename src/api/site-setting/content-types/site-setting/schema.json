@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "site-settings",
+  "info": {
+    "singularName": "site-setting", 
+    "pluralName": "site-settings",
+    "displayName": "Site Settings",
+    "description": "Global site settings: logo, contact, social"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    },
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": true
+    }
+  },
+  "attributes": {
+    "site_title": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "required": true
+    },
+    "contact_email": {
+      "type": "email",
+      "required": true
+    },
+    "contact_phone": {
+      "type": "string"
+    },
+    "social_links": {
+      "type": "json"
+    }
+  }
+}

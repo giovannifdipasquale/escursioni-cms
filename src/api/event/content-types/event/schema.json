@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": "Seasonal and cultural events"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["cultural", "seasonal", "sport"],
+      "required": true
+    },
+    "start_datetime": {
+      "type": "datetime",
+      "required": true
+    },
+    "end_datetime": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.geo-point",
+      "required": true
+    },
+    "location_name": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

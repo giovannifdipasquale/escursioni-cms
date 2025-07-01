@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "huts",
+  "info": {
+    "singularName": "hut",
+    "pluralName": "huts",
+    "displayName": "Hut",
+    "description": "Mountain huts or shelters"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    },
+    "content-type-builder": {
+      "visible": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.geo-point"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "related_trails": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::trail.trail",
+      "mappedBy": "related_huts"
+    }
+  }
+}

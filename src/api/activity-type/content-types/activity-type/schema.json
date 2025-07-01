@@ -1,0 +1,23 @@
+{
+  "collectionName": "activity_types",
+  "info": {
+    "singularName": "activity-type",
+    "pluralName": "activity-types",
+    "displayName": "Activity Type"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "related_trails": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::trail.trail",
+      "inversedBy": "activity_types"
+    }
+  }
+}

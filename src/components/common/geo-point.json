@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_common_geo_point",
+  "info": {
+    "displayName": "Geo Point",
+    "icon": "map-pin",
+    "description": "Latitude and longitude"
+  },
+  "options": {},
+  "attributes": {
+    "latitude": {
+      "type": "decimal",
+      "required": true
+    },
+    "longitude": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}
