@@ -3,10 +3,10 @@ services:
     name: strapi-backend
     env: node
     plan: free
-    repo: https://github.com/tuo-utente/tuo-repo
+    repo: https://github.com/giovannifdipasquale/escursioni-cms
     branch: main
-    buildCommand: yarn install && yarn build
-    startCommand: yarn start
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
     envVars:
       - key: NODE_VERSION
         value: 18
@@ -15,18 +15,22 @@ services:
       - key: DATABASE_CLIENT
         value: postgres
       - key: DATABASE_NAME
-        value: nome_del_tuo_db
+        value: escursioni_cms_db
       - key: DATABASE_HOST
-        value: host_render
+        value: d1jdos15pdvs73dp1ai0.postgresql.render.com
       - key: DATABASE_PORT
         value: 5432
       - key: DATABASE_USERNAME
-        value: tuo_utente
+        value: escursioni_cms_db_user
       - key: DATABASE_PASSWORD
-        value: tua_password
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: APP_KEYS
         generateValue: true
       - key: ADMIN_JWT_SECRET
         generateValue: true
+      - key: DATABASE_SSL
+        value: "true"
+      - key: DATABASE_SSL_REJECT_UNAUTHORIZED
+        value: "false"
