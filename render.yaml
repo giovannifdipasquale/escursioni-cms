@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: strapi-backend
+    env: node
+    plan: free
+    repo: https://github.com/tuo-utente/tuo-repo
+    branch: main
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    envVars:
+      - key: NODE_VERSION
+        value: 18
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_CLIENT
+        value: postgres
+      - key: DATABASE_NAME
+        value: nome_del_tuo_db
+      - key: DATABASE_HOST
+        value: host_render
+      - key: DATABASE_PORT
+        value: 5432
+      - key: DATABASE_USERNAME
+        value: tuo_utente
+      - key: DATABASE_PASSWORD
+        value: tua_password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        generateValue: true
