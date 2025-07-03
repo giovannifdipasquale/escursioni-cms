@@ -23,7 +23,7 @@ services:
       - key: DATABASE_USERNAME
         value: escursioni_cms_db_user
       - key: DATABASE_PASSWORD
-        sync: false
+        value: 2oBOA53avOP6rpSeku0OcyuWwokKeKaX
       - key: JWT_SECRET
         generateValue: true
       - key: APP_KEYS
