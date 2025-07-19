@@ -17,7 +17,7 @@ services:
       - key: DATABASE_NAME
         value: escursioni_cms_db
       - key: DATABASE_HOST
-        value: postgresql://escursioni_cms_db_user:2oBOA53avOP6rpSeku0OcyuWwokKeKaX@dpg-d1jdos15pdvs73dp1ai0-a/escursioni_cms_db
+        value: dpg-d1jdos15pdvs73dp1ai0-a
       - key: DATABASE_PORT
         value: 5432
       - key: DATABASE_USERNAME
