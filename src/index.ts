@@ -23,7 +23,7 @@ export default {
     console.log("🔄 Starting bootstrap process...");
     console.log("🌍 Current NODE_ENV:", process.env.NODE_ENV);
 
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === "development") {
       await seedTrails(strapi);
       await seedHuts(strapi);
     } else {
